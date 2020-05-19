@@ -8,7 +8,7 @@ function setup() {
   }
   
   function draw() {
-    background(0);
+    background('#FFCC48');
     
     rotateX(frameCount * 0.01);
     rotateY(frameCount * 0.01);
