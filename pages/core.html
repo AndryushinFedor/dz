@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отходняк после сессии</title>
+    <link rel="stylesheet" href="../styles//index.css">
+    <script src="../js/ejs.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/render-template.js"></script>
+</head>
+
+<body>
+    <script id="template" type="text/template">
+        <div class="wrapper">
+            <h1>Финал</h1>
+            <h2>Завершите отходняк, выполнив заключительные упражнения</h2>
+            <div class="info">
+                <% core.forEach(w => {%>
+                    <h3><%= w.title %></h3>
+                    <p><%= w.desc %></p>
+                <% }) %>
+            </div>
+        </div>
+        <div class="btn-in-center">
+            <a class="btn" href="../index.html">Готово</a>
+        </div>
+    </script>
+
+    <div class="content" id="content"></div>
+
+    <div id="canvas"></div>
+    <script src="../js/sketch.js"></script>
+    <script src="../js/p5.js"></script>
+</body>
+
+</html>
