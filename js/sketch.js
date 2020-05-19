@@ -11,37 +11,30 @@ function setup() {
     x1 = width / 2
     y1 = height / 2
 }
-
-function draw() {
-    i += 1
-    createCircle(x1, y1, i)
-    if (i > 20) {
-        l += 1
-        createCircle(x1, y1, l)
-        if (l > 20) { l = 0 }
+function setup() {
+    createCanvas(windowWidth, windowHeight, WEBGL);
+    
+    frameRate(30);
+  }
+  
+  function draw() {
+    background(0);
+    
+    rotateX(frameCount * 0.01);
+    rotateY(frameCount * 0.01);
+    rotateZ(frameCount * 0.01);
+    
+    for (let i = 0; i < 50; i++) {
+      createBubble(0, 0, 10 * i + 10, random(1, 5), { r: random(0, 255), g: 0, b: random(0, 255) });
     }
-    if (i > 40) { i = 0 }
-
-    createCircle(mouseX, mouseY, 1)
-
-    if (mouseIsPressed) {
-        x1 = mouseX
-        y1 = mouseY
-    } else {
-        x1 = width / 2
-        y1 = height / 2
-    }
-}
-
-function createCircle(x, y, a) {
-    noFill()
-    stroke(255)
-    ellipse(x, y, a * 300)
-
-    fill(51, 25, 65, 5);
-    noStroke();
-    rect(0, 0, windowWidth, windowHeight);
-}
+  }
+  
+  function createBubble(x, y, d, s, col) {
+    strokeWeight(2);
+    noFill();
+    stroke(col.r, col.g, col.b);
+    ellipse(x + random(-3, 3), y + random(-3, 3), d);
+  }
 
 // Изменяем размер канваса, если изменился размер окна
 function windowResized() {
