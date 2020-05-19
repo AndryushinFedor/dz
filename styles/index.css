@@ -1,6 +1,5 @@
 @import 'reset.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 
 * {
     box-sizing: border-box;
@@ -17,7 +16,6 @@
     margin: auto;
     font-size: 30vw;
     font-weight: 900;
-    font-family: Roboto, sans-serif;
     -webkit-text-stroke: 1.5px rgb(85, 255, 0);
     -webkit-text-fill-color: rgb(0, 38, 255);
     z-index: 10;
@@ -29,7 +27,7 @@ body {
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: 'PT Mono', monospace;
     overflow: hidden;
     background-color: rgb(0, 21, 255);
 }
@@ -53,7 +51,7 @@ body.is-flexible {
 }
 
 h1 {
-    font-family: Montserrat, sans-serif;
+    font-family: 'PT Mono', monospace;
     font-weight: 900;
     font-size: 88px;
     font-style: italic;
@@ -71,15 +69,6 @@ h1 {
     left: 32px;
 }
 
-.is-right {
-    position: absolute;
-    right: 32px;
-}
-
-.is-bottom {
-    position: absolute;
-    bottom: 0;
-}
 
 h2 {
     color: white;
