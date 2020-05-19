@@ -1,20 +1,10 @@
-let i = 0
-let l = 0
-let x1
-let y1
+
 
 function setup() {
-    let myCanvas = createCanvas(windowWidth, windowHeight);
+    let myCanvas = createCanvas(windowWidth, windowHeight, WEBGL);
     myCanvas.parent("canvas");
     background('#FFCC48');
     frameRate(60)
-    x1 = width / 2
-    y1 = height / 2
-}
-function setup() {
-    createCanvas(windowWidth, windowHeight, WEBGL);
-    
-    frameRate(30);
   }
   
   function draw() {
